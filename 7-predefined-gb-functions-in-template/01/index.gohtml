@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>predefined functions </title>
+    </head>
+    <body>
+    
+        {{index . 0}}
+        {{index . 1}}
+        {{index . 2}}
+    there are also global 'if'
+    {{range .}}
+        {{if .Name}}
+            {{.Name}}
+         {{end}}
+    {{end}}
+
+    also 'and'
+    {{if .Name and .IsTrue}}
+        {{.Name}}
+    {{end}}
+
+    also 'gt' for gratest 'lt' for lowest 'eq' for equalsto
+    {{if gt .1 .2}}
+    </body>
+</html>

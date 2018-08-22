@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>passing composite datastructure </title>
+    </head>
+    <body>
+        <!-- <ul>
+        {{range .}}
+        <li>{{.}} </li>
+        {{end}}
+        </ul> -->
+
+        <!-- OR -->
+        <ul>
+            {{range $index, $element := .}}
+            <li>
+                {{$index}}  -  {{$element}}
+            </li>
+            {{end}}
+        </ul>
+    </body>
+</html>

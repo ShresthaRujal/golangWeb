@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>slice of structs</title>
+    </head>
+
+    <body>
+        <ul>
+        {{range .Wisdom}}
+        <li>{{uc .Name}}  - {{uc .Address}} </li>
+        {{end}}
+        </ul>
+
+        <ul>
+                {{range .Hope}}
+                <li>{{ft .Manufacture}}  - {{sqrt .Speed}} </li>
+                {{end}}
+        </ul>
+    </body>
+</html>
