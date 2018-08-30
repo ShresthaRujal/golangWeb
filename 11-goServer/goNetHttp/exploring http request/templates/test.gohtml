@@ -1,0 +1,31 @@
+<html>
+    <head></head>
+    <body>
+        <header>
+            {{if .Method}} <p>The request Method : {{.Method}}</p> {{end}}
+            {{if .ContentLength}} <p>The request Method : {{.ContentLength}}</p> {{end}}
+            <p>a</p>
+            {{if .Header}}
+                {{range $k, $v := .Header}}
+                    <p>{{$k}}</p>
+                    <ul>
+                        {{range $v}}
+                        <li>{{.}}</li>
+                        {{end}}
+                    </ul>
+                {{end}}
+            {{end}}
+            <p>b</p>
+            {{if .Submissions}}
+            {{range $key, $value := .Submissions}}
+                {{$key}} - {{$value}}
+            {{end}}
+        {{end}}
+        </header>
+
+        <form method="POST" action="/">
+            <input type="text" name="name" placeholder="name"/>
+            <input type="submit" name="submit-btn" value="submit"/>
+        </form>
+    </body>
+</html>

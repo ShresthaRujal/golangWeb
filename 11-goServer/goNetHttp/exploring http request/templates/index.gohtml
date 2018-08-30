@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>go-test</title>
+    </head>
+    <body>
+            {{range $key, $value := .}}
+        <ul>
+           <strong>{{$key}}</strong>
+                <li> {{$value}}</li> 
+           
+        </ul>
+        <strong>OR</strong>
+        {{range $value}}
+        <ul>
+            <strong>{{$key}}</strong>
+                <li> {{.}}</li> 
+                {{end}}
+             </ul>
+             {{end}}
+        <form method="POST" action="/">
+            <input type="text" name="name" placeholder="name"/>
+            <input type="submit" name="submit-btn" value="submit"/>
+        </form>
+
+        <p>therefor form has keys and values ... which is map of type "map[string][]string"</p>
+    </body>
+</html>
